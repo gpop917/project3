@@ -5,14 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Man.G</title>
-    <style>
-        #top {width: 100%; height: 1019px; background-color: darkseagreen;}
-        header {height: 70px; display: flex; background-color: #FFD800;}
-        .logo {background-color: #FFD800; height: 70px; }
-        .logo img {margin-left: 90px; width: 230px; height: 60px;}
-        .main {width: 410px; height: 70px; background-color: aqua;}
 
-        #ourbox {width: 100%; height: 980px; background-color: lavenderblush;}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+
+    <style>
+         *{margin: 0; padding: 0; box-sizing: border-box;}
+         ul,li,ol {list-style: none;}
+         a {text-decoration: none;}
+
+
+        #top {width: 100%; height: 900px; background-color: aquamarine; position: relative;}
+        .left_top {background-image: url(img/main1.jpeg); width: 50%; height: 900px; position: absolute; top: 0; left: 0; }
+        .right_top {background-image: url(img/main2.gif); width: 50%; height: 900px; position: absolute; top: 0; right: 0; }
+
+        header {width: 100%; height: 70px;  background-color: #FFD800; position: absolute; top: 0; left: 0; z-index: 10;}
+        .logo {background-color: #FFD800; height: 70px; float: left;}
+        .logo img {margin-left: 70px; width: 230px; height: 60px;}
+        nav {float: right;width: 33%; height: 100%; margin-top: 10px; float: left;}
+        nav li { float: left; width: 15%; text-align: center; line-height: 50px;}
+        nav li a {color: black; }
+        nav li a:hover {color: #bbb;}
+
+        .right-nav {float: right; width: 330px; height: 70px; display: flex;}
+        .right-navtext {width: 170px; height: 70px;}
+        .right-navtext >nav {width: 100%;}
+        .right-navtext >nav li {width: 50%; padding: 0; font-size: 14.5px;}
+        .right-navtext >nav li a {color: black; }
+        .right-navtext >nav li a:hover {color: #bbb;}
+        .search_box {width: 30px; height: 70px; margin-left: 20px; }
+        .search_box i {width: 30px; height: 70px; font-size: 22px; line-height: 70px;}
+        .list_box {width: 50px; height: 70px; margin-left: 20px; }
+        .list_box i {width: 50px; height: 70px; font-size: 28px; line-height: 70px;}
+
+
+        #ourbox {width: 100%; height: 980px; background-color: #000000;}
+        .ourbox_center {width: 1425px; height: 745px; background-color: aquamarine; margin: 0 auto 0;}
+        .ourbox_text {width: 1425px; height: 94px; background-color: rosybrown; }
+        h3.ourh3 {font-size: 42px; color: #FFFFFF; margin: 30px 0 0 20px;}
+
         #History {width: 100%; height: 1075px; background-color: steelblue;}
         #img2 {width: 100%; height: 760px; background-color: navajowhite;}
         #event {width: 100%; height: 1200px; background-color: lightsalmon;}
@@ -24,19 +54,48 @@
     <div id="top">
         <header>
             <div class="logo"><img src="img/logo.jpg" alt="logo"></div>
-            <div class="main">
+            <nav>
                 <ul>
-                    <li>HOME</li>
-                    <li>ABOUT</li>
-                    <li>STORE</li>
-                    <li>COLLECTION</li>
-                    <li>LOOKBOOK</li>
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">만지</a></li>
+                    <li><a href="#">구매</a></li>
+                    <li><a href="#">컬렉션</a></li>
+                    <li><a href="#">룩북</a></li>
                 </ul>
+            </nav>
+
+            <div class="right-nav">
+                <div class="right-navtext">
+                    <nav>
+                        <ul>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">마이 페이지</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="search_box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="list_box">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
+
         </header>
+        
+        <div class="left_top"></div>
+        <div class="right_top"></div>
 
     </div>
-    <div id="ourbox"></div>
+
+    <div id="ourbox">
+        <div class="ourbox_center">
+            <div class="ourbox_text">
+                <h3 class="ourh3">Our outfits</h3>
+            </div>
+        </div>
+    </div>
+
     <div id="History"></div>
     <div id="img2"></div>
     <div id="event"></div>
