@@ -37,11 +37,35 @@
         .list_box {width: 50px; height: 70px; margin-left: 20px; }
         .list_box i {width: 50px; height: 70px; font-size: 28px; line-height: 70px;}
 
+        ul.presentation {width: 300px; height: 141px; }
+        li.is-selected {width: 300px; height: 47px; border-top: 0; background-color: #222; border-bottom: 1px solid #333; }
+        .is-selected a {color: #bbb; font-size: 14px; padding-bottom: 12px; margin-left: 20px; }
 
-        #ourbox {width: 100%; height: 980px; background-color: #000000;}
-        .ourbox_center {width: 1425px; height: 745px; background-color: aquamarine; margin: 0 auto 0;}
-        .ourbox_text {width: 1425px; height: 94px; background-color: rosybrown; }
-        h3.ourh3 {font-size: 42px; color: #FFFFFF; margin: 30px 0 0 20px;}
+
+        #ourbox {width: 100%; height: 1000px; background-color: #222; padding-top: 150px;}
+        .ourbox_center {width: 1172px; height: 745px; background-color: aquamarine; margin: 0 auto 0;}
+        .ourbox_text {width: 1172px; height: 94px; background-color: rosybrown; padding-left: 20px;}
+        h2.ourh3 {font-weight: normal; letter-spacing: -0.005em; font-family: "genesis-head-light"; font-size: 36px; color: #FFFFFF; }
+        p.our-p {color: #CCCCCC; font-size: 14px; margin-top: 10px;}
+
+        /* all버튼 박스 */
+        .all-box {display: block; width: 100%; height: 45px; background-color: violet; margin-top: 25px;}
+        .all-buttonbox {position: relative; vertical-align: top; width: 300px; height: 45px; float: left; margin-left: 20px; background-color: yellow;}
+        .all-buttonbox > a.all-3button {height: 45px; border-bottom: 1px solid #fff; background-color: #111; padding: 5px 0 0 15px; font-size: 0; display: block; position: relative;}
+        a.all-3button span {color: #fff; font-size: 23px; display: inline-block; max-width: 100%; text-overflow: ellipsis; white-space: nowrap; }
+        .all-buttonbox > a.all-3button:after {border-color: #fff; width: 0.6rem; height: 0.6rem; top: 50%; right: 0.2rem; margin-top: -0.6rem; border: 2px solid #fff; border-width: 2px 2px 0 0; transform: rotate(135deg); content: ''; position: absolute; background-repeat: no-repeat; background-size: 100% auto;}
+        .all-buttonbox > .all-buttonbox3 {display: none;}
+        
+
+        /* 사진 3개 */
+        .all-3photo-buttonbox {width: 100%; height: 390px; margin-top: 74px; background-color: skyblue;}
+        .all-3photobox {width: 1150px; height: 346px; background-color: #FFD800; margin: 0 auto;}
+        .all-3photo {width: 344px; height: 345px; background-color: tomato;} 
+        .text-3photo {position: relative;}
+        h3.all-name {margin: 10px 0 0 10px; font-size: 20px; color: #BBBBBB; font-weight: normal;}
+        p.tee-name {width: 250px; font-weight: normal; color: #BBBBBB; margin-left: 10px; margin-top: 5px;}
+        .text-3photo > img {right: 20px; position: absolute; bottom: 0;}
+
 
         #History {width: 100%; height: 1075px; background-color: steelblue;}
         #img2 {width: 100%; height: 760px; background-color: navajowhite;}
@@ -49,6 +73,17 @@
         #contents {width: 167px; height: 570px; background-color: blueviolet;}
         footer {width: 100%; height: 1365px; background-color: #000000;}
     </style>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+    <script>
+            $(function () {
+                $('.all-buttonbox').click(function () {
+                    $(this).children('.all-buttonbox3').slideToggle();
+                });
+            });
+
+    </script>
 </head>
 <body>
     <div id="top">
@@ -88,18 +123,60 @@
 
     </div>
 
-    <div id="ourbox">
-        <div class="ourbox_center">
-            <div class="ourbox_text">
-                <h3 class="ourh3">Our outfits</h3>
+    <div id="main-background">
+        <div id="ourbox">
+            <div class="ourbox_center">
+                <div class="ourbox_text">
+                    <h2 class="ourh3">OUR OUTFITS</h2>
+                    <p class="our-p">개성넘치면서도 우아한 디자인의 그라피스트 만지 브랜드 라인업을 살펴보세요.</p>
+                </div>
+
+                <div class="all-box">
+                    <div class="all-buttonbox">
+                        <a class="all-3button" title="의상 선택">
+                            <span>ALL</span>
+                        </a>
+                        <div class="all-buttonbox3" role="listbox" >
+                            <ul role="presentation">
+                                <li role="presentation" value="ALL" class="is-selected">
+                                    <a href="#" role="option">ALL</a>
+                                </li>
+
+                                <li role="presentation" value="OUTER" class="is-selected">
+                                    <a href="#" role="option">OUTER</a>
+                                </li>
+
+                                <li role="presentation" value="PANTS" class="is-selected">
+                                    <a href="#" role="option">PANTS</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="all-3photo-buttonbox">
+                    <div class="all-3photobox">
+                        <div class="all-3photo">
+                            <div class="text-3photo">
+                                <h3 class="all-name">TEE</h3>
+                                <p class="tee-name">MGMTS22SS312BK</p>
+                                <img src="img/newbutton.webp" alt="newbutton">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+    
+        <div id="History"></div>
+        <div id="img2"></div>
+        <div id="event"></div>
+        <div id="Contents"></div>
+    
     </div>
 
-    <div id="History"></div>
-    <div id="img2"></div>
-    <div id="event"></div>
-    <div id="Contents"></div>
+
     <footer></footer>
 </body>
 </html>
