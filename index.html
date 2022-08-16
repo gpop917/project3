@@ -42,7 +42,7 @@
         .is-selected a {color: #bbb; font-size: 14px; padding-bottom: 12px; margin-left: 20px; }
 
 
-        #ourbox {width: 100%; height: 1000px; background-color: #222; padding-top: 150px;}
+        #ourbox {width: 100%; height: 1700px; background-color: #222; padding-top: 150px;}
         .ourbox_center {width: 1172px; height: 745px; background-color: aquamarine; margin: 0 auto 0;}
         .ourbox_text {width: 1172px; height: 94px; background-color: rosybrown; padding-left: 20px;}
         h2.ourh3 {font-weight: normal; letter-spacing: -0.005em; font-family: "genesis-head-light"; font-size: 36px; color: #FFFFFF; }
@@ -50,7 +50,7 @@
 
         /* all버튼 박스 */
         .all-box {display: block; width: 100%; height: 45px; background-color: violet; margin-top: 25px;}
-        .all-buttonbox {position: relative; vertical-align: top; width: 300px; height: 45px; float: left; margin-left: 20px; background-color: yellow;}
+        .all-buttonbox { z-index: 10; position: relative; vertical-align: top; width: 300px; height: 45px; float: left; margin-left: 20px; background-color: yellow;}
         .all-buttonbox > a.all-3button {height: 45px; border-bottom: 1px solid #fff; background-color: #111; padding: 5px 0 0 15px; font-size: 0; display: block; position: relative;}
         a.all-3button span {color: #fff; font-size: 23px; display: inline-block; max-width: 100%; text-overflow: ellipsis; white-space: nowrap; }
         .all-buttonbox > a.all-3button:after {border-color: #fff; width: 0.6rem; height: 0.6rem; top: 50%; right: 0.2rem; margin-top: -0.6rem; border: 2px solid #fff; border-width: 2px 2px 0 0; transform: rotate(135deg); content: ''; position: absolute; background-repeat: no-repeat; background-size: 100% auto;}
@@ -58,17 +58,36 @@
         
 
         /* 사진 3개 */
-        .all-3photo-buttonbox {width: 100%; height: 390px; margin-top: 74px; background-color: skyblue;}
-        .all-3photobox {width: 1150px; height: 346px; background-color: #FFD800; margin: 0 auto;}
-        .all-3photo {width: 344px; height: 345px; background-color: tomato;} 
+        .all-3photo-buttonbox {width: 100%; height: 450px; margin-top: 74px; background-color: skyblue; margin-bottom: 200px;}
+        .all-3photobox {width: 1150px; height: 400px; background-color: #FFD800; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between;}
+        .all-3photo {width: 344px; height: 400px; background-color: #444;} 
         .text-3photo {position: relative;}
         h3.all-name {margin: 10px 0 0 10px; font-size: 20px; color: #BBBBBB; font-weight: normal;}
         p.tee-name {width: 250px; font-weight: normal; color: #BBBBBB; margin-left: 10px; margin-top: 5px;}
         .text-3photo > img {right: 20px; position: absolute; bottom: 0;}
-        .all-3photo > .allimg {margin-top: 10px; margin-left: 10px; background-image:  url(./img/allimg.png); width: 95%; height: 200px;}
+        .all-3photo > .allimg {margin: 10px 0 15px 10px; background-image:  url(./img/allimg.png); width: 95%; height: 250px;}
+        .all-3photo > .allimg2 {margin: 10px 0 15px 10px; background-image:  url(./img/allimg2.png); width: 95%; height: 250px;}
+        .all-3photo > .allimg3 {margin: 10px 0 15px 10px; background-image:  url(./img/allimg3.png); width: 95%; height: 250px;}
+        .photo3-buttonbox {width: 90%; margin: 0 auto;  border: 2px solid #fff; text-align: center; }
+        /* .photo3-buttonbox:hover {background-color: #fff; } */
+        .photo3-buttonbox >a.btn5 {width: 100%; height: 100%; color: #fff; position: relative; display: inline-block;}
+        a.btn5::before { content: ''; position: absolute; left: 0px; bottom:0px; width: 100%; height:100%; background: transparent; box-shadow: inset 0px 0px 0px #222; display: block; -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);transition: all 0.4s cubic-bezier(.5, .24, 0, 1)}
+        a.btn5:hover::before {box-shadow: inset 310px 0px 0px #222;}
+        span.text2 {line-height: 40px; position: relative; z-index: 3;}
+        .button-3photobox {width: 100%; bottom: 0; text-align: center; transition: 300ms opacity; z-index: 10; margin-top: 20px; }
+        button.button-3photo {border-radius: 50%;  margin: 0 4px; width: auto; padding: 4px; color: #fff;}
+        .ico-bullet {background-color: transparent; border-color: #fff; display: block; width: 5px; height: 5px; border: 2px solid transparent; border-radius: 50%; background-clip: padding-box;}
+        .blind {overflow: hidden; position: absolute; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px);}
+
+        #History { width: 100%; height: 763px; margin-top: 170px; background-color: #333; display: flex; flex-direction: row; justify-content: space-between;}
+        .history-leftbox {width: 48%; height: 520px; background: url(./img/leftimg.jpg);}
+        .left-textbox {width: 510px; height: 195px; vertical-align: top; margin: 60px 0 0 60px;}
+        span.history-lefth2 {color: #fff; font-size: 42px; width: 510px; height: 50px;}
+        p.heistory-leftp {color: #fff; margin-top: 14px; font-size: 19px;}
+
+        .history-rightbox {width: 48%; height: 520px; background: url(./img/rightimg.jpg);}
 
 
-        #History {width: 100%; height: 1075px; background-color: steelblue;}
         #img2 {width: 100%; height: 760px; background-color: navajowhite;}
         #event {width: 100%; height: 1200px; background-color: lightsalmon;}
         #contents {width: 167px; height: 570px; background-color: blueviolet;}
@@ -118,7 +137,7 @@
             </div>
 
         </header>
-        
+
         <div class="left_top"></div>
         <div class="right_top"></div>
 
@@ -137,7 +156,7 @@
                         <a class="all-3button" title="의상 선택">
                             <span>ALL</span>
                         </a>
-                        <div class="all-buttonbox3" role="listbox" >
+                        <div class="all-buttonbox3" role="listbox">
                             <ul role="presentation">
                                 <li role="presentation" value="ALL" class="is-selected">
                                     <a href="#" role="option">ALL</a>
@@ -164,21 +183,102 @@
                                 <img src="img/newbutton.webp" alt="newbutton">
                             </div>
                             <div class="allimg"></div>
+                            <div class="photo3-buttonbox">
+                                <a href="#" class="btn5">
+                                    <span class="text2">자세히 보기</span>
+                                </a>
+                            </div>
+                
+                
+                        </div>
+                        <div class="all-3photo">
+                            <div class="text-3photo">
+                                <h3 class="all-name">TEE</h3>
+                                <p class="tee-name">MGMTS22SS308YE</p>
+                                <img src="img/newbutton.webp" alt="newbutton">
+                            </div>
+                            <div class="allimg2"></div>
+                            <div class="photo3-buttonbox">
+                                <a href="#" class="btn5">
+                                    <span class="text2">자세히 보기</span>
+                                </a>
+                            </div>
+                
+                
+                        </div>
+                        <div class="all-3photo">
+                            <div class="text-3photo">
+                                <h3 class="all-name">TOP</h3>
+                                <p class="tee-name">MGSH21FW205PK</p>
+                                <img src="img/newbutton.webp" alt="newbutton">
+                            </div>
+                            <div class="allimg3"></div>
+                            <div class="photo3-buttonbox">
+                                <a href="#" class="btn5">
+                                    <span class="text2">자세히 보기</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="button-3photobox">
+                        <button class="button-3photo">
+                            <span class="ico-bullet">
+                                <span class="blind">slide1</span>
+                            </span>
+                        </button>
+                        <button class="button-3photo">
+                            <span class="ico-bullet">
+                                <span class="blind">slide2</span>
+                            </span>
+                        </button>
+                        <button class="button-3photo">
+                            <span class="ico-bullet">
+                                <span class="blind">slide3</span>
+                            </span>
+                        </button>
+                        <button class="button-3photo">
+                            <span class="ico-bullet">
+                                <span class="blind">slide4</span>
+                            </span>
+                        </button>
+                        <button class="button-3photo">
+                            <span class="ico-bullet">
+                                <span class="blind">slide5</span>
+                            </span>
+                        </button>
+                        <button class="button-3photo">
+                            <span class="ico-bullet">
+                                <span class="blind">slide6</span>
+                            </span>
+                        </button>
+                        <button class="button-3photo">
+                            <span class="ico-bullet">
+                                <span class="blind">slide7</span>
+                            </span>
+                        </button>
+                    </div>
                 </div>
-
             </div>
+            <div id="History">
+                <div class="history-leftbox">
+                    <div class="left-textbox">
+                        <span class="history-lefth2">COLLECTION</span>
+                        <p class="heistory-leftp">I collected pictures of various shows and events that Grappist Manzi participated in.
+                            You can enjoy runway, backstage, and videos.
+                        </p>
+                        <a href="#">
+                            <span>자세히 보기</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="history-rightbox"></div>
+            </div>
+            <div id="img2"></div>
+            <div id="event"></div>
+            <div id="Contents"></div>
         </div>
-    
-        <div id="History"></div>
-        <div id="img2"></div>
-        <div id="event"></div>
-        <div id="Contents"></div>
-    
-    </div>
 
-
-    <footer></footer>
+            <footer></footer>
 </body>
 </html>
