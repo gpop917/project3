@@ -42,7 +42,7 @@
         .is-selected a {color: #bbb; font-size: 14px; padding-bottom: 12px; margin-left: 20px; }
 
 
-        #ourbox {width: 100%; height: 2700px; background-color: #222; padding-top: 150px;}
+        #ourbox {width: 100%; height: 3790px; background-color: #222; padding-top: 150px;}
         .ourbox_center {width: 1172px; height: 745px; background-color: aquamarine; margin: 0 auto 0;}
         .ourbox_text {width: 1172px; height: 94px; background-color: rosybrown; padding-left: 20px;}
         h2.ourh3 {font-weight: normal; letter-spacing: -0.005em; font-family: "genesis-head-light"; font-size: 36px; color: #FFFFFF; }
@@ -80,26 +80,51 @@
         .blind {overflow: hidden; position: absolute; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px);}
 
         #History { width: 100%; height: 763px; margin-top: 170px; background-color: #333; display: flex; flex-direction: row; justify-content: space-between;}
-        .history-leftbox {width: 48%; height: 520px; background: url(./img/leftimg.jpg);}
-        .left-textbox {width: 510px; height: 195px; vertical-align: top; margin: 60px 0 0 60px;}
+        .history-leftbox {position: relative; width: 48%; height: 520px; background-image: url(./img/leftimg.jpg);}
+        .history-leftbox::before {content: ""; position: absolute;  width: 100%; height: 100%; background-color: #000; opacity: 0.6;}
+        .left-textbox {position: absolute; width: 510px; height: 195px; vertical-align: top; margin: 60px 0 0 60px; }
         span.history-lefth2 {color: #fff; font-size: 42px; width: 510px; height: 50px;}
         p.heistory-leftp {color: #fff; margin-top: 14px; margin-bottom: 25px; font-size: 19px;}
         span.pspan {  color: #fff; font-size: 18px; }
         .pspan > a {color: #fff; border-bottom: 1px solid #fff;}
 
-        .history-rightbox {width: 48%; height: 520px; background: url(./img/rightimg.jpg);}
+        .history-rightbox {position: relative; width: 48%; height: 520px; background-image: url(./img/rightimg.jpg);}
+        .history-rightbox::before {content: ""; position: absolute;width: 100%; height: 100%; background-color: #000; opacity: 0.6;}
 
 
-        #event {width: 100%; height: 1200px; }
-        .eventimgbox {width: 100vw; height: 100vh; background-image: url(./img/eventimg1.jpg); background-repeat: no-repeat; background-size: cover; position: relative;}
+        #event {width: 100%; height: 1150px; }
+        .eventimgbox {position: relative; width: 100%; height: 100vh; background-image: url(./img/eventimg1.jpg); background-repeat: no-repeat; background-size: cover; }
+        .eventimgbox::before {content: ""; position: absolute;  width: 100%; height: 100%; background-color: #000; opacity: 0.6;}
         .event-textbox {width: 710px; height: 240px; margin-left: 140px; top: 50%; position: absolute; transform: translateY(-50%);  }
         span.eventh1 {color: #fff; font-size: 54px; width: 100%; display: block; margin-bottom: 20px;}
         span.eventspan {color: #fff; font-size: 26px;}
         .event-textbox > .photo3-buttonbox { width: 280px; height: 50px; float: left; margin-top: 40px; border: 2px solid #fff; text-align: center;}
 
 
-        #contents {width: 167px; height: 570px; background-color: blueviolet;}
+        #contents {width:1953px; height: 810px; background-color: #fff; padding-top: 115px;}
+        .contents-centerbox {width: 80%; height: 575px; margin: 0 auto; }
+        h2.contentsh2 {width: 100%; height: 80px; font-size: 30px; color: #000; font-weight: 400; text-align: center; }
+        .contents-3imgbox {width: 100%; height: 495px; display: flex; justify-content: space-between; }
+        .contents-imgbox {width: 500px; height: 495px; }
+        .contents-img { width: 500px; height: 329px; background-image: url(./img/con1.jpg);}
+        .contents-img2 { width: 500px; height: 329px; background-image: url(./img/con2.jpg);}
+        .contents-textbox {width: 100%; height: 140px; margin-top: 26px; }
+        .contents-textbox > strong {font-size: 23px; font-weight: 400;}
+        .contents-pbox {font-size: 16px; color: #262626; line-height: 1.75; margin-top: 10px; margin-bottom: 10px;}
+        .contents-textbox > span.pspan {color: #262626 ; font-size: 16px;}
+        .contents-textbox > span.pspan >a {color: #262626; border-bottom: 1px solid #262626; }
+
+
+
         footer {width: 100%; height: 1365px; background-color: #000000;}
+        .footer-info-share {border-bottom: 1px solid #333; height: 55px; border-top: 1px solid #1e1e1e; box-sizing: border-box;}
+        .footer-textbox {width: 205px; height: 30px; margin-left: 140px; margin-top: 15px;}
+        span.share {font-size: 16px; color: #fff; line-height: 18px;}
+        .footer-textbox > i {font-size: 16px; color: #808080; margin-left: 20px; margin-right: 13px;}
+        .footer-textbox > i:hover {color: #fff;}
+        .footer-topbox {float: right; width: 80px; height: 25px;}
+        span.top {font-size: 16px; color: #fff;}
+
     </style>
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
@@ -303,9 +328,55 @@
                     </div>
                 </div>
             </div>
-            <div id="Contents"></div>
+
+
+            <div id="contents">
+                <div class="contents-centerbox">
+                    <h2 class="contentsh2">연관 컨텐츠</h2>
+                    <div class="contents-3imgbox">
+                        <div class="contents-imgbox">
+                            <div class="contents-img"></div>
+                            <div class="contents-textbox">
+                                <strong>event</strong>
+                                <p class="contents-pbox">그라피스트 만지에서 진행중인 다양한 이벤트 정보를 전해 드립니다.</p>
+                                <span class="pspan"><a href="#">자세히 보기</a> &gt; </span>
+                            </div>
+                        </div>
+
+                        <div class="contents-imgbox">
+                            <div class="contents-img2"></div>
+                            <div class="contents-textbox">
+                                <strong>digital apps</strong>
+                                <p class="contents-pbox">그라피스트 만지의 앱 서비스에서 다양한 옷들을 편리하게 볼 수 있습니다.</p>
+                                <span class="pspan"><a href="#">자세히 보기</a> &gt; </span>
+                            </div>
+                        </div>
+
+                        <div class="contents-imgbox">
+                            <div class="contents-img"></div>
+                            <div class="contents-textbox">
+                                <strong>point</strong>
+                                <p class="contents-pbox">그라피스트 만지의 다양한 옷들을 구매하고 멤버쉽 포인트를 활용하여 다양한 혜택을 받아보세요.</p>
+                                <span class="pspan"><a href="#">자세히 보기</a> &gt; </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-            <footer></footer>
+            <footer>
+                <div class="footer-info-share">
+                    <div class="footer-textbox">
+                        <span class="share">Share</span>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                    </div>
+                    <div class="footer-topbox">
+                        <span class="top">Top</span>
+                    </div>
+                </div>
+            </footer>
 </body>
 </html>
