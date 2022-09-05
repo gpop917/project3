@@ -1,7 +1,11 @@
+@charset "UTF-8";
+
+ /* reset.css */
 *{margin: 0; padding: 0; box-sizing: border-box;}
 ul,li,ol {list-style: none;}
 a {text-decoration: none;}
 
+@media (min-width:1300px){
 
 #top {width: 100%; height: 900px; background-color: aquamarine; position: relative;}
 .left_top {background-image: url(../img/main1.jpeg); width: 50%; height: 900px; position: absolute; top: 0; left: 0; }
@@ -94,9 +98,9 @@ span.eventspan {color: #fff; font-size: 26px;}
 .contents-centerbox {width: 80%; height: 575px; margin: 0 auto; }
 h2.contentsh2 {width: 100%; height: 80px; font-size: 30px; color: #000; font-weight: 400; text-align: center; }
 .contents-3imgbox {width: 100%; height: 495px; display: flex; justify-content: space-between; }
-.contents-imgbox {width: 500px; height: 495px; }
-.contents-img { width: 500px; height: 329px; background-image: url(../img/con1.jpg);}
-.contents-img2 { width: 500px; height: 329px; background-image: url(../img/con2.jpg);}
+.contents-imgbox {width: 34%; height: 495px; }
+.contents-img { width: 100%; height: 329px; background-image: url(../img/con1.jpg);}
+.contents-img2 { width: 100%; height: 329px; background-image: url(../img/con2.jpg);}
 .contents-textbox {width: 100%; height: 140px; margin-top: 26px; }
 .contents-textbox > strong {font-size: 23px; font-weight: 400;}
 .contents-pbox {font-size: 16px; color: #262626; line-height: 1.75; margin-top: 10px; margin-bottom: 10px;}
@@ -114,7 +118,7 @@ span.share {font-size: 16px; color: #fff; line-height: 18px;}
 .footer-topbox {float: right; width: 80px; height: 25px; margin-right: 140px; margin-top: 15px;}
 span.top {font-size: 16px; color: #fff;}
 
-.footer-menu {width: 1650px; height: 790px; margin: 0 auto; padding: 40px 40px 0 35px; display: flex; flex-wrap: wrap; }
+.footer-menu {width: 100%; height: 790px; margin: 0 auto; padding: 40px 40px 0 35px; display: flex; flex-wrap: wrap; }
 .footer-menu1 {width: 390px; height: 380px; }
 span.footer-span {color: #fff; font-size: 16px; font-weight: 400; }
 p.footer-p {font-size: 15px; color: #BBB; margin: 13px 0 10px 3px; }
@@ -145,3 +149,4 @@ p.footer-p2:hover {color: #fff;}
 p.footer-copy {color: #fff;}
 p.footer-copy2 {color: #fff; margin-left: 93px; }
 
+}
