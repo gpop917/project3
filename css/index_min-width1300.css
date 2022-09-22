@@ -30,6 +30,17 @@ nav li a:hover {color: #bbb;}
 .list_box {width: 50px; height: 70px; margin-left: 20px; }
 .list_box i {width: 50px; height: 70px; font-size: 28px; line-height: 70px;}
 
+/* 766 버튼 누르면 나오는 화면 */
+.overlay { height: 100%; width: 0%; position: fixed; z-index:103; top: 0; right: 0; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.9); overflow-x: hidden; transition: 0.5s;}
+.overlay-content {position: relative;top: 25%; width: 100%; text-align: center; display:block; margin-top: 30px; }
+.overlay a { padding:10px; line-height:160%; text-decoration: none; font-size: 30px; color: #818181;  transition: 0.3s; font-weight: bold; display: block;}
+.overlay a:hover, .overlay a:focus {color: #f1f1f1;}
+.overlay .closebtn {position: absolute; top: 20px; right: 45px; font-size: 60px;}
+
+ul.presentation {width: 300px; height: 141px; }
+li.is-selected {width: 300px; height: 47px; border-top: 0; background-color: #222; border-bottom: 1px solid #333; }
+.is-selected a {color: #bbb; font-size: 14px; padding-bottom: 12px; margin-left: 20px; }
+
 ul.presentation {width: 300px; height: 141px; }
 li.is-selected {width: 300px; height: 47px; border-top: 0; background-color: #222; border-bottom: 1px solid #333; }
 .is-selected a {color: #bbb; font-size: 14px; padding-bottom: 12px; margin-left: 20px; }
@@ -58,14 +69,17 @@ a.all-3button span {color: #fff; font-size: 23px; display: inline-block; max-wid
 h3.all-name {margin: 10px 0 0 10px; font-size: 20px; color: #BBBBBB; font-weight: normal;}
 p.tee-name {width: 250px; font-weight: normal; color: #BBBBBB; margin-left: 10px; margin-top: 5px;}
 .text-3photo > img {right: 20px; position: absolute; bottom: 0;}
-.all-3photo > .allimg {margin: 10px 0 15px 10px; background-image:  url(../img/allimg.png); width: 95%; height: 250px;}
-.all-3photo > .allimg2 {margin: 10px 0 15px 10px; background-image:  url(../img/allimg2.png); width: 95%; height: 250px;}
-.all-3photo > .allimg3 {margin: 10px 0 15px 10px; background-image:  url(../img/allimg3.png); width: 95%; height: 250px;}
+.all-3photo > .allimg {margin: 10px 0 15px 10px; background-image:  url(../img/allimg.png); width: 95%; height: 250px; background-size: contain; background-repeat: no-repeat; background-position: center;}
+.all-3photo > .allimg2 {margin: 10px 0 15px 10px; background-image:  url(../img/allimg2.png); width: 95%; height: 250px; background-size: contain; background-repeat: no-repeat; background-position: center;}
+.all-3photo > .allimg3 {margin: 10px 0 15px 10px; background-image:  url(../img/allimg3.png); width: 95%; height: 250px; background-size: contain; background-repeat: no-repeat; background-position: center;}
+.all-3photo > .allimg4 {margin: 10px 0 15px 10px; background-image:  url(../img/allimg4.png); width: 95%; height: 250px; background-size: contain; background-repeat: no-repeat; background-position: center;}
+.all-3photo > .allimg5 {margin: 10px 0 15px 10px; background-image:  url(../img/allimg5.png); width: 95%; height: 250px; background-size: contain; background-repeat: no-repeat; background-position: center;}
+.all-3photo > .allimg6 {margin: 10px 0 15px 10px; background-image:  url(../img/allimg6.png); width: 95%; height: 250px; background-size: contain; background-repeat: no-repeat; background-position: center;}
 .photo3-buttonbox {width: 90%; margin: 0 auto;  border: 2px solid #fff; text-align: center; }
 /* .photo3-buttonbox:hover {background-color: #fff; } */
 .photo3-buttonbox >a.btn5 {width: 100%; height: 100%; color: #fff; position: relative; display: inline-block;}
 a.btn5::before { content: ''; position: absolute; left: 0px; bottom:0px; width: 100%; height:100%; background: transparent; box-shadow: inset 0px 0px 0px #222; display: block; -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);transition: all 0.4s cubic-bezier(.5, .24, 0, 1)}
-a.btn5:hover::before {box-shadow: inset 310px 0px 0px #222;}
+a.btn5:hover::before {box-shadow: inset 350px 0px 0px #222;}
 span.text2 {line-height: 40px; position: relative; z-index: 3;}
 .button-3photobox {width: 100%; bottom: 0; text-align: center; transition: 300ms opacity; z-index: 10; margin-top: 20px; }
 button.button-3photo {border-radius: 50%;  margin: 0 4px; width: auto; padding: 4px; color: #fff;}
@@ -85,7 +99,7 @@ span.pspan {  color: #fff; font-size: 18px; }
 .history-rightbox::before {content: ""; position: absolute;width: 100%; height: 100%; background-color: #000; opacity: 0.6;}
 
 
-#event {width: 100%; height: 1150px; }
+#event {width: 95%; height: 1150px; }
 .eventimgbox {position: relative; width: 100%; height: 100vh; background-image: url(../img/eventimg1.jpg); background-repeat: no-repeat; background-size: cover; }
 .eventimgbox::before {content: ""; position: absolute;  width: 100%; height: 100%; background-color: #000; opacity: 0.6;}
 .event-textbox {width: 710px; height: 240px; margin-left: 140px; top: 50%; position: absolute; transform: translateY(-50%);  }
@@ -98,10 +112,10 @@ span.eventspan {color: #fff; font-size: 26px;}
 .contents-centerbox {width: 80%; height: 575px; margin: 0 auto; }
 h2.contentsh2 {width: 100%; height: 80px; font-size: 30px; color: #000; font-weight: 400; text-align: center; }
 .contents-3imgbox {width: 100%; height: 495px; display: flex; justify-content: space-between; }
-.contents-imgbox {width: 34%; height: 495px; }
+.contents-imgbox {width: 32%; height: 495px; }
 .contents-img { width: 100%; height: 329px; background-image: url(../img/con1.jpg);}
 .contents-img2 { width: 100%; height: 329px; background-image: url(../img/con2.jpg);}
-.contents-textbox {width: 100%; height: 140px; margin-top: 26px; }
+.contents-textbox {width: 90%; height: 140px; margin-top: 26px; }
 .contents-textbox > strong {font-size: 23px; font-weight: 400;}
 .contents-pbox {font-size: 16px; color: #262626; line-height: 1.75; margin-top: 10px; margin-bottom: 10px;}
 .contents-textbox > span.pspan {color: #262626 ; font-size: 16px;}

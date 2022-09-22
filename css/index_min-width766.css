@@ -1,20 +1,18 @@
 @charset "UTF-8";
 
 
-
-@media (min-width:767px) and (max-width:1299px){
+@media (max-width:766px){
     #top {width: 100%; height: 900px; background-color: aquamarine; position: relative;}
-.left_top {background-image: url(../img/main1.jpeg); background-size: cover; width: 50%; height: 900px; position: absolute; top: 0; left: 0; }
-.right_top {background-image: url(../img/main2.gif); background-size: cover; width: 50%; height: 900px; position: absolute; top: 0; right: 0; }
+.left_top {background-image: url(../img/main1.jpeg); background-size: cover; width: 100%; height: 900px; position: absolute; top: 0; left: 0; }
+.blind {overflow: hidden; position: absolute; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px);}
 
 header {width: 100%; height: 70px;  background-color: #FFD800; position: absolute; top: 0; left: 0; z-index: 10;}
 .logo {background-color: #FFD800; width: 230px; height: 70px; float: left;}
-.logo img {margin-left: 50px; width: 180px; height: 60px;}
-nav {float: right;width: 33%; height: 100%; margin-top: 10px; float: left;}
-nav li { float: left; width: 15%; text-align: center; line-height: 50px;}
-nav li:nth-of-type(4) { float: left; width: 23%; text-align: center; line-height: 50px;}
-nav li a {color: black; }
-nav li a:hover {color: #bbb;}
+.logo img {margin-left: 30px; width: 155px; height: 55px;}
+
+nav {display: none; float: right;width: 33%; height: 100%; margin-top: 10px; float: left;}
+
+
 
 .right-nav {float: right; width: 35%; height: 70px; display: flex;}
 .right-navtext {width: 170px; height: 70px;}
@@ -26,9 +24,12 @@ nav li a:hover {color: #bbb;}
 .search_box i {width: 30px; height: 70px; font-size: 22px; line-height: 70px;}
 .list_box {width: 50px; height: 70px; margin-left: 20px; }
 .list_box i {width: 50px; height: 70px; font-size: 28px; line-height: 70px;}
+.list_box i > .line:nth-child(1) {top: 50%; transform: rotate(45deg);}
+.list_box i > .line:nth-child(2) {top: 27px;}
+.list_box i > .line:nth-child(3) {top: 50%; transform: rotate(-45deg);}
 
 /* 766 버튼 누르면 나오는 화면 */
-.overlay { height: 100%; width: 0%; position: fixed; z-index:103; top: 0; right: 0; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.9); overflow-x: hidden; transition: 0.5s;}
+.overlay {height: 100%; width: 0%; position: fixed; z-index:103; top: 0; right: 0; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.9); overflow-x: hidden; transition: 0.5s;}
 .overlay-content {position: relative;top: 25%; width: 100%; text-align: center; display:block; margin-top: 30px; }
 .overlay a { padding:10px; line-height:160%; text-decoration: none; font-size: 30px; color: #818181;  transition: 0.3s; font-weight: bold; display: block;}
 .overlay a:hover, .overlay a:focus {color: #f1f1f1;}
@@ -39,12 +40,7 @@ li.is-selected {width: 300px; height: 47px; border-top: 0; background-color: #22
 .is-selected a {color: #bbb; font-size: 14px; padding-bottom: 12px; margin-left: 20px; }
 
 
-ul.presentation {width: 300px; height: 141px; }
-li.is-selected {width: 300px; height: 47px; border-top: 0; background-color: #222; border-bottom: 1px solid #333; }
-.is-selected a {color: #bbb; font-size: 14px; padding-bottom: 12px; margin-left: 20px; }
-
-
-#ourbox {width: 100%; height: 3790px; background-color: #222; padding-top: 150px;}
+#ourbox {width: 100%; height: 5250px; background-color: #222; padding-top: 150px;}
 .ourbox_center {width: 100%; height: 745px; margin: 0 auto 0;}
 .ourbox_text {width: 100%; height: 94px;  padding-left: 20px;}
 h2.ourh3 {font-weight: normal; letter-spacing: -0.005em; font-family: "genesis-head-light"; font-size: 36px; color: #FFFFFF; }
@@ -61,13 +57,13 @@ a.all-3button span {color: #fff; font-size: 23px; display: inline-block; max-wid
 
 /* 사진 3개 */
 .all-3photo-buttonbox {width: 100%; height: 490px; margin-top: 74px; margin-bottom: 200px;}
-.all-3photobox {width: 100%; height: 450px; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between;}
-.all-3photo {width: 33%; height: 450px; background-color: #262626;} 
+.all-3photobox {width: 1445px; height: 450px; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between;}
+.all-3photo {background-color: #262626;} 
 .text-3photo {position: relative;}
 h3.all-name {margin: 10px 0 0 10px; font-size: 20px; color: #BBBBBB; font-weight: normal;}
 p.tee-name {width: 95%; font-weight: normal; color: #BBBBBB; margin-left: 10px; margin-top: 5px;}
 .text-3photo > img {right: 20px; position: absolute; bottom: 0;}
-.all-3photo > .allimg {margin: 10px 0 15px 10px; background-size: contain; background-repeat: no-repeat; background-position: center; background-image:  url(../img/allimg.png); background-repeat: no-repeat; width: 95%; height: 300px;}
+.all-3photo > .allimg {margin: 10px 0 15px 10px; background-size: contain; background-repeat: no-repeat; background-position: center; background-image:  url(../img/allimg.png); width: 95%; height: 300px;}
 .all-3photo > .allimg2 {margin: 10px 0 15px 10px; background-size: contain; background-repeat: no-repeat; background-position: center; background-image:  url(../img/allimg2.png); width: 95%; height: 300px;}
 .all-3photo > .allimg3 {margin: 10px 0 15px 10px; background-size: contain; background-repeat: no-repeat; background-position: center; background-image:  url(../img/allimg3.png); width: 95%; height: 300px;}
 .all-3photo > .allimg4 {margin: 10px 0 15px 10px; background-image:  url(../img/allimg4.png); width: 95%; height: 250px; background-size: contain; background-repeat: no-repeat; background-position: center;}
@@ -77,15 +73,15 @@ p.tee-name {width: 95%; font-weight: normal; color: #BBBBBB; margin-left: 10px; 
 /* .photo3-buttonbox:hover {background-color: #fff; } */
 .photo3-buttonbox >a.btn5 {width: 100%; height: 100%; color: #fff; position: relative; display: inline-block;}
 a.btn5::before { content: ''; position: absolute; left: 0px; bottom:0px; width: 100%; height:100%; background: transparent; box-shadow: inset 0px 0px 0px #222; display: block; -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);transition: all 0.4s cubic-bezier(.5, .24, 0, 1)}
-a.btn5:hover::before {box-shadow: inset 360px 0px 0px #222;}
+a.btn5:hover::before {box-shadow: inset 490px 0px 0px #222;}
 span.text2 {line-height: 40px; position: relative; z-index: 3;}
 .button-3photobox {width: 100%; bottom: 0; text-align: center; transition: 300ms opacity; z-index: 10; margin-top: 20px; }
 button.button-3photo {border-radius: 50%;  margin: 0 4px; width: auto; padding: 4px; color: #fff;}
 .ico-bullet {background-color: transparent; border-color: #fff; display: block; width: 5px; height: 5px; border: 2px solid transparent; border-radius: 50%; background-clip: padding-box;}
 .blind {overflow: hidden; position: absolute; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px);}
 
-#History { width: 100%; height: 763px; margin-top: 170px; background-color: #222; display: flex; flex-direction: row; justify-content: space-between;}
-.history-leftbox {position: relative; width: 48%; height: 520px; background-image: url(../img/leftimg.jpg);}
+#History { width: 100%; height: 1090px; margin-top: 150px; background-color: #222; display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; margin-bottom: 150px;}
+.history-leftbox {position: relative; width: 100%; height: 520px; background-image: url(../img/leftimg.jpg);}
 .history-leftbox::before {content: ""; position: absolute;  width: 100%; height: 100%; background-color: #000; opacity: 0.6;}
 .left-textbox {position: absolute; width: 89%; height: 195px; vertical-align: top; margin: 60px 0 0 40px; }
 span.history-lefth2 {color: #fff; font-size: 42px; width: 510px; height: 50px;}
@@ -93,24 +89,24 @@ p.heistory-leftp {color: #fff; margin-top: 14px; margin-bottom: 25px; font-size:
 span.pspan {  color: #fff; font-size: 18px; }
 .pspan > a {color: #fff; border-bottom: 1px solid #fff;}
 
-.history-rightbox {position: relative; width: 48%; height: 520px; background-image: url(../img/rightimg.jpg);}
+.history-rightbox {position: relative; width: 100%; height: 520px; background-image: url(../img/rightimg.jpg);}
 .history-rightbox::before {content: ""; position: absolute;width: 100%; height: 100%; background-color: #000; opacity: 0.6;}
 
 
-#event {width: 100%; height: 1150px; }
+#event {width: 100%; height: 1140px; }
 .eventimgbox {position: relative; width: 100%; height: 100vh; background-image: url(../img/eventimg1.jpg); background-repeat: no-repeat; background-size: cover; }
 .eventimgbox::before {content: ""; position: absolute;  width: 100%; height: 100%; background-color: #000; opacity: 0.6;}
-.event-textbox {width: 95%; height: 240px; margin-left: 40px; top: 50%; position: absolute; transform: translateY(-50%);  }
-span.eventh1 {color: #fff; font-size: 54px; width: 100%; display: block; margin-bottom: 20px;}
-span.eventspan {color: #fff; font-size: 26px;}
-.event-textbox > .photo3-buttonbox { width: 280px; height: 50px; float: left; margin-top: 40px; border: 2px solid #fff; text-align: center;}
+.event-textbox {width: 94%; height: 240px; margin-left: 30px; top: 50%; position: absolute; transform: translateY(-50%);  }
+span.eventh1 {color: #fff; font-size: 50px; width: 100%; display: block; margin-bottom: 20px;}
+span.eventspan {color: #fff; font-size: 18px;}
+.event-textbox > .photo3-buttonbox { width: 95%; height: 50px; float: left; margin-top: 40px; border: 2px solid #fff; text-align: center;}
 
 
-#contents {width:100%; height: 810px; background-color: #fff; padding-top: 115px;}
-.contents-centerbox {width: 80%; height: 575px; margin: 0 auto; }
+#contents {width:100%; height: 1824px; background-color: #fff; padding-top: 115px;}
+.contents-centerbox {width: 91%; height: 1709px; margin: 0 auto; }
 h2.contentsh2 {width: 100%; height: 80px; font-size: 30px; color: #000; font-weight: 400; text-align: center; }
-.contents-3imgbox {width: 100%; height: 495px; display: flex; justify-content: space-between; }
-.contents-imgbox {width: 32%; height: 495px; }
+.contents-3imgbox {width: 100%; height: 495px; display: flex; flex-wrap: wrap; align-items: center; }
+.contents-imgbox {width: 100%; height: 495px; margin-bottom: 50px;}
 .contents-img { width: 100%; height: 329px; background-image: url(../img/con1.jpg);}
 .contents-img2 { width: 100%; height: 329px; background-image: url(../img/con2.jpg);}
 .contents-textbox {width: 100%; height: 140px; margin-top: 26px; }

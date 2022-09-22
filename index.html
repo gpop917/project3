@@ -7,14 +7,18 @@
     <title>Man.G</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 
     <link rel="stylesheet" href="./css/index_min-width1300.css">
     <link rel="stylesheet" href="./css/index_min-width767.css">
+    <link rel="stylesheet" href="./css/index_min-width766.css">
 
-    <style>
-    </style>
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="js/js.js"></script>
+
+    <!-- 슬라이더 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script>
             $(function () {
@@ -39,6 +43,21 @@
                 </ul>
             </nav>
 
+            <!-- 766 버튼 메뉴 -->
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">                    
+                    <a href="#">HOME</a>
+                    <a href="#">PAGES</a>
+                    <a href="#">SERVICES</a>
+                    <a href="#">EVENT</a>
+                    <a href="#">GALLERY</a>
+                    <a href="#">BLOG</a>
+                    <a href="#">SHOP</a>
+                  </div>
+            </div>
+
+
             <div class="right-nav">
                 <div class="right-navtext">
                     <nav>
@@ -51,12 +70,18 @@
                 <div class="search_box">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <div class="list_box">
-                    <i class="fa-solid fa-bars"></i>
+                <div class="list_box" onclick="openNav()">
+                    <i class="fa-solid fa-bars">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="blind text-navi">전체 메뉴 닫기</span>
+                    </i>
                 </div>
             </div>
 
         </header>
+
 
         <div class="left_top"></div>
         <div class="right_top"></div>
@@ -94,9 +119,9 @@
                     </div>
                 </div>
 
-                <div class="all-3photo-buttonbox">
-                    <div class="all-3photobox">
-                        <div class="all-3photo">
+                <div class="all-3photo-buttonbox swiper myswiper">
+                    <div class="all-3photobox swiper-wrapper">
+                        <div class="all-3photo swiper-slide">
                             <div class="text-3photo">
                                 <h3 class="all-name">TEE</h3>
                                 <p class="tee-name">MGMTS22SS312BK</p>
@@ -111,7 +136,7 @@
                 
                 
                         </div>
-                        <div class="all-3photo">
+                        <div class="all-3photo swiper-slide">
                             <div class="text-3photo">
                                 <h3 class="all-name">TEE</h3>
                                 <p class="tee-name">MGMTS22SS308YE</p>
@@ -126,7 +151,7 @@
                 
                 
                         </div>
-                        <div class="all-3photo">
+                        <div class="all-3photo swiper-slide">
                             <div class="text-3photo">
                                 <h3 class="all-name">TOP</h3>
                                 <p class="tee-name">MGSH21FW205PK</p>
@@ -139,9 +164,56 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="button-3photobox">
+                        <div class="all-3photo swiper-slide">
+                            <div class="text-3photo">
+                                <h3 class="all-name">TOP</h3>
+                                <p class="tee-name">MGMOT22FW103BE</p>
+                                <img src="img/newbutton.webp" alt="newbutton">
+                            </div>
+                            <div class="allimg4"></div>
+                            <div class="photo3-buttonbox">
+                                <a href="#" class="btn5">
+                                    <span class="text2">자세히 보기</span>
+                                </a>
+                            </div>
+                
+                
+                        </div>
+                        <div class="all-3photo swiper-slide">
+                            <div class="text-3photo">
+                                <h3 class="all-name">PANTS</h3>
+                                <p class="tee-name">MGMPA22FW507BE</p>
+                                <img src="img/newbutton.webp" alt="newbutton">
+                            </div>
+                            <div class="allimg5"></div>
+                            <div class="photo3-buttonbox">
+                                <a href="#" class="btn5">
+                                    <span class="text2">자세히 보기</span>
+                                </a>
+                            </div>
+                
+                
+                        </div>
+                        <div class="all-3photo swiper-slide">
+                            <div class="text-3photo">
+                                <h3 class="all-name">ONEPIECE</h3>
+                                <p class="tee-name">MGMDR22FW12002WH</p>
+                                <img src="img/newbutton.webp" alt="newbutton">
+                            </div>
+                            <div class="allimg6"></div>
+                            <div class="photo3-buttonbox">
+                                <a href="#" class="btn5">
+                                    <span class="text2">자세히 보기</span>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+                    <!-- <div class="button-3photobox">
                         <button class="button-3photo">
                             <span class="ico-bullet">
                                 <span class="blind">slide1</span>
@@ -177,8 +249,9 @@
                                 <span class="blind">slide7</span>
                             </span>
                         </button>
-                    </div>
+                    </div> -->
                 </div>
+                
             </div>
             <div id="History">
                 <div class="history-leftbox">
